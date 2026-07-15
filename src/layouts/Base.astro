@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+const { title, description } = Astro.props;
+const desc =
+  description ??
+  "letaible — Studio für sichere, rechtskonforme Cloud-Software. Wir bauen Werkzeuge, die halten, was sie behaupten.";
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={desc} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <header class="site-head">
+      <div class="container head-inner">
+        <a href="/" class="brand" aria-label="letaible Startseite">letaible</a>
+        <nav class="nav">
+          <a href="/#produkte">Produkte</a>
+          <a href="/#kontakt">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main><slot /></main>
+
+    <footer class="site-foot">
+      <div class="container foot-inner">
+        <span class="foot-brand">letaible</span>
+        <nav class="foot-links">
+          <a href="/impressum/">Impressum</a>
+          <a href="/datenschutz/">Datenschutz</a>
+        </nav>
+      </div>
+      <div class="container foot-copy">© {year} letaible</div>
+    </footer>
+
+    <style>
+      .site-head { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.85); backdrop-filter: saturate(1.6) blur(8px); border-bottom: 1px solid var(--border); }
+      .head-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+      .brand { font-weight: 800; color: var(--navy-900); font-size: 1.25rem; letter-spacing: -0.02em; text-decoration: none; }
+      .nav { display: flex; gap: 1.25rem; }
+      .nav a { text-decoration: none; color: var(--slate); font-weight: 500; font-size: 0.95rem; }
+      .nav a:hover { color: var(--navy-800); }
+      .site-foot { border-top: 1px solid var(--border); background: var(--paper); margin-top: 4rem; padding: 2rem 0 1.5rem; }
+      .foot-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+      .foot-brand { font-weight: 800; color: var(--navy-900); }
+      .foot-links { display: flex; gap: 1.25rem; }
+      .foot-links a { color: var(--slate); text-decoration: none; font-size: 0.92rem; }
+      .foot-links a:hover { color: var(--navy-800); }
+      .foot-copy { margin-top: 1.25rem; color: var(--slate-300); font-size: 0.85rem; }
+    </style>
+  </body>
+</html>
