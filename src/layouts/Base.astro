@@ -32,15 +32,17 @@ const year = new Date().getFullYear();
 
     <main><slot /></main>
 
-    <footer class="site-foot">
+    <footer class="site-foot foot-dark">
       <div class="container foot-inner">
         <span class="foot-brand">letaible</span>
         <nav class="foot-links">
+          <a href="https://nis2scan.de" rel="noopener">nis2scan</a>
+          <a href="/kontakt/">Kontakt</a>
           <a href="/impressum/">Impressum</a>
           <a href="/datenschutz/">Datenschutz</a>
         </nav>
       </div>
-      <div class="container foot-copy">© {year} letaible</div>
+      <div class="container foot-copy">© {year} Letaible GmbH</div>
     </footer>
 
     <style>
