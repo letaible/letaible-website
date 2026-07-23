@@ -16,11 +16,10 @@ npm run preview
 `dist/` ist reines statisches HTML/CSS. Hostbar auf Strato-Webspace,
 Cloudflare Pages oder GitHub Pages. `site` steht auf `https://letaible.de`.
 
-## Vor dem Livegang (Pflicht)
+## Deployment auf Strato (aktueller Stand)
 
-- **Impressum**: hier läuft die eigentliche Impressumspflicht der Firma;
-  alle `[…]`-Platzhalter füllen (heute Einzelunternehmer, nach UG-Gründung
-  Firmierung + HRB nachziehen).
-- **Datenschutz**: Hosting-Anbieter, Log-Speicherdauer, Aufsichtsbehörde.
-- **Kontakt** (`src/pages/index.astro`): `[KONTAKT-E-MAIL]` ersetzen.
-- Quelle der Rechtstexte: `../nis2scan-planning/recht/`.
+Impressum, Datenschutzerklärung und Kontaktformular sind mit den echten
+Angaben der Letaible GmbH gefüllt (HRB 20612, AG Fürth). Zum Livegang:
+Inhalt von `dist/` per SFTP nach `htdocs/letaible` laden, Domain letaible.de
+darauf zeigen lassen, SSL aktivieren. Das Kontaktformular braucht PHP und
+läuft daher erst auf dem Strato-Server.
