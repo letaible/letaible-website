@@ -1,60 +1,61 @@
 ---
-import Base from "../layouts/Base.astro";
+import Base from "../../layouts/Base.astro";
 
 const principles = [
-  ["01", "Ehrlich statt laut", "Unsere Werkzeuge behaupten nie mehr, als sie geprüft haben. Was nicht sicher feststeht, wird als offen markiert statt beschönigt."],
-  ["02", "Rechtssicher gebaut", "Compliance ist kein Marketing-Etikett. Wo wir auf Gesetze verweisen, ist die Quelle belegt und im Vier-Augen-Review nachgeprüft."],
-  ["03", "Offen, wo es geht", "Kernfunktionen sind quelloffen. Transparenz schafft Vertrauen, gerade in der Sicherheit."],
+  ["01", "Honest, not loud", "Our tools never claim more than they have actually verified. Whatever is not certain gets flagged as open, not glossed over."],
+  ["02", "Built on solid legal ground", "Compliance is not a marketing label. Wherever we reference a law, the source is documented and verified in a four-eyes review."],
+  ["03", "Open wherever possible", "Core features are open source. Transparency builds trust, especially in security."],
 ];
 ---
 
-<Base title="letaible · Software für Cloud-Sicherheit und Compliance" altUrl="/en/">
+<Base title="letaible · Software for cloud security and compliance" lang="en" altUrl="/">
   <section class="hero-dark">
     <div class="container hero-inner">
-      <p class="eyebrow">Software-Studio · Fürth</p>
-      <h1>Werkzeuge, die halten,<br />was sie behaupten.</h1>
+      <p class="eyebrow">Software studio · Fürth</p>
+      <h1>Tools that live up<br />to their claims.</h1>
       <p class="lede">
-        Die Letaible GmbH baut Software für Cloud-Sicherheit und Compliance.
-        Unser Grundsatz: Ehrlichkeit vor Effekt. Wir sagen, was ein
-        Werkzeug prüft, und ebenso klar, was es nicht kann.
+        Letaible GmbH builds software for cloud security and compliance.
+        Our principle: honesty over effect. We state clearly what a tool
+        checks, and just as clearly what it cannot do.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-amber" href="#produkte">Unsere Produkte</a>
-        <a class="btn btn-outline-light" href="/kontakt/">Kontakt</a>
+        <a class="btn btn-amber" href="#produkte">Our products</a>
+        <a class="btn btn-outline-light" href="/en/contact/">Contact</a>
       </div>
     </div>
     <div class="container">
       <div class="trust-strip">
-        <span class="t">Deutsche Rechtstiefe</span>
-        <span class="t">Open-Core-Modell</span>
+        <span class="t">German legal depth</span>
+        <span class="t">Open-core model</span>
         <span class="t">Read-only by design</span>
-        <span class="t">EU-Datenhaltung</span>
+        <span class="t">EU data hosting</span>
       </div>
     </div>
   </section>
 
   <section class="section" id="produkte">
     <div class="container">
-      <p class="eyebrow">Produkte</p>
-      <h2 class="h-underline">Woran wir arbeiten.</h2>
+      <p class="eyebrow">Products</p>
+      <h2 class="h-underline">What we are building.</h2>
       <div class="product">
         <div class="product-visual">
           <div class="codeblock" style="font-size:0.85rem">
             <span class="g">$</span> pip install nis2scan<br />
             <span class="g">$</span> nis2scan scan --provider aws<br /><br />
-            <span class="c">Nr. 8 Kryptographie … erfüllt ✓</span>
+            <span class="c">No. 8 Cryptography … fulfilled ✓</span>
           </div>
         </div>
         <div>
           <h3>nis2scan</h3>
           <p>
-            Open-Source-Scanner für §30 BSIG (NIS2): prüft AWS &amp; Azure gegen
-            die zehn Pflichtmaßnahmen, jeder Befund mit wörtlichem
-            Gesetzeszitat und ISO-27001-Bezug. Der freie Kern ist vollständig
-            nutzbar; Professional- und Enterprise-Stufen ergänzen Komfort und
-            Skalierung, nie Korrektheit.
+            Open-source scanner for §30 BSIG (the German NIS2 implementation
+            in the BSI Act): checks AWS &amp; Azure against the ten
+            mandatory measures, every finding with a verbatim statutory
+            citation and its ISO 27001 reference. The free core is fully
+            usable on its own; the Professional and Enterprise tiers add
+            convenience and scale, never correctness.
           </p>
-          <a class="btn btn-primary btn-sm" href="https://nis2scan.de" rel="noopener">Zu nis2scan →</a>
+          <a class="btn btn-primary btn-sm" href="https://nis2scan.de" rel="noopener">Go to nis2scan →</a>
         </div>
       </div>
     </div>
@@ -62,8 +63,8 @@ const principles = [
 
   <section class="section band">
     <div class="container">
-      <p class="eyebrow">Haltung</p>
-      <h2 class="h-underline">Wofür wir stehen.</h2>
+      <p class="eyebrow">Our stance</p>
+      <h2 class="h-underline">What we stand for.</h2>
       <div class="grid cols-3" style="margin-top:2rem">
         {principles.map(([nr, t, d]) => (
           <div class="card">
@@ -78,12 +79,12 @@ const principles = [
 
   <section class="hero-dark cta-dark" id="kontakt">
     <div class="container cta">
-      <h2 style="color:#fff">Sprechen wir.</h2>
+      <h2 style="color:#fff">Let's talk.</h2>
       <p class="lede" style="margin:0 auto 1.5rem">
-        Fragen zu unseren Produkten, Kooperationen oder Pilotprojekte?
+        Questions about our products, partnerships, or pilot projects?
       </p>
       <div class="hero-cta" style="justify-content:center">
-        <a class="btn btn-amber" href="/kontakt/">Zum Kontaktformular</a>
+        <a class="btn btn-amber" href="/en/contact/">Go to the contact form</a>
         <a class="btn btn-outline-light" href="mailto:info@letaible.de">info@letaible.de</a>
       </div>
     </div>
