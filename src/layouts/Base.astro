@@ -51,14 +51,26 @@ const t =
     <title>{title}</title>
     <meta name="description" content={desc} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={desc} />
+    <meta property="og:image" content="https://letaible.de/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:type" content="website" />
   </head>
   <body>
     <header class="site-head">
       <div class="container head-inner">
-        <a href={home} class="brand" aria-label={t.brandAria}>letaible</a>
+        <a href={home} class="brand" aria-label={t.brandAria}>
+          <svg class="brand-logo" viewBox="0 0 64 64" width="26" height="26" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#0b1b34"></rect>
+            <text x="29" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff" text-anchor="middle">l</text>
+            <circle cx="41" cy="42" r="4.5" fill="#f59e0b"></circle>
+          </svg>
+          <span>letaible</span>
+        </a>
         <nav class="nav">
           <a href={`${home}#produkte`}>{t.navProdukte}</a>
           <a href={`${home}#kontakt`}>{t.navKontakt}</a>
@@ -85,7 +97,8 @@ const t =
     <style>
       .site-head { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.85); backdrop-filter: saturate(1.6) blur(8px); border-bottom: 1px solid var(--border); }
       .head-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-      .brand { font-weight: 800; color: var(--navy-900); font-size: 1.25rem; letter-spacing: -0.02em; text-decoration: none; }
+      .brand { display: flex; align-items: center; gap: 0.5rem; font-weight: 800; color: var(--navy-900); font-size: 1.25rem; letter-spacing: -0.02em; text-decoration: none; }
+      .brand-logo { border-radius: 6px; flex-shrink: 0; }
       .nav { display: flex; align-items: center; gap: 1.25rem; }
       .nav a { text-decoration: none; color: var(--slate); font-weight: 500; font-size: 0.95rem; }
       .nav a:hover { color: var(--navy-800); }
