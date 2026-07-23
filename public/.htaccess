@@ -1,0 +1,5 @@
+# HTTP -> HTTPS Weiterleitung (Strato/Apache). Nur aktiv, wenn das
+# SSL-Zertifikat der Domain zugewiesen ist.
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
