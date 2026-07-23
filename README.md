@@ -1,4 +1,4 @@
-# letaible.de — Website
+# Website letaible.de
 
 Statische Firmenseite (Astro) für das Studio letaible (Dachmarke; Produkt: nis2scan).
 
@@ -13,12 +13,12 @@ npm run preview
 
 ## Deployment
 
-`dist/` ist reines statisches HTML/CSS — hostbar auf Strato-Webspace,
+`dist/` ist reines statisches HTML/CSS. Hostbar auf Strato-Webspace,
 Cloudflare Pages oder GitHub Pages. `site` steht auf `https://letaible.de`.
 
 ## Vor dem Livegang (Pflicht)
 
-- **Impressum**: hier läuft die eigentliche Impressumspflicht der Firma —
+- **Impressum**: hier läuft die eigentliche Impressumspflicht der Firma;
   alle `[…]`-Platzhalter füllen (heute Einzelunternehmer, nach UG-Gründung
   Firmierung + HRB nachziehen).
 - **Datenschutz**: Hosting-Anbieter, Log-Speicherdauer, Aufsichtsbehörde.
