@@ -16,6 +16,7 @@ const t =
     ? {
         brandAria: "letaible homepage",
         navProdukte: "Products",
+        navBeratung: "Consulting",
         navKontakt: "Contact",
         footKontakt: "Contact",
         footImpressum: "Imprint (German)",
@@ -24,6 +25,7 @@ const t =
     : {
         brandAria: "letaible Startseite",
         navProdukte: "Produkte",
+        navBeratung: "Beratung",
         navKontakt: "Kontakt",
         footKontakt: "Kontakt",
         footImpressum: "Impressum",
@@ -73,6 +75,7 @@ const t =
         </a>
         <nav class="nav">
           <a href={`${home}#produkte`}>{t.navProdukte}</a>
+          <a href={`${home}#beratung`}>{t.navBeratung}</a>
           <a href={`${home}#kontakt`}>{t.navKontakt}</a>
           <a class="lang-switch" href={resolvedAltUrl}>{lang === "de" ? "EN" : "DE"}</a>
         </nav>
